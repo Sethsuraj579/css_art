@@ -1,0 +1,220 @@
+/* Reset and base */
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: rgba(68, 62, 151, 0.782);
+    color: #eee;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-image: url('Color/bgcolor2.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.8;
+  }
+
+  header {
+    background: linear-gradient(135deg, #128607 0%, #25fccde2 100%);
+    padding: 24px 32px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(38, 50, 56, 0.3);
+    user-select: none;
+    filter: drop-shadow(0 2px 4px rgba(221, 215, 215, 0.332));
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 0 0 16px 16px;
+    opacity: 0.9;
+  }
+  header h1 {
+    margin: 0;
+    font-weight: 900;
+    font-size: 2rem;
+    letter-spacing: 0.07em;
+    color:rgba(22, 23, 15, 0.9);
+    text-transform: uppercase;
+    text-shadow: 0 1px 6px rgba(0,0,0,0.4);
+    border: #539cd780 3px solid;
+    filter: grayscale(0.7) contrast(1.2) brightness(1.4);
+    border-radius: 16px;
+  }
+
+  main {
+    flex: 1;
+    padding: 32px;
+    max-width: 1440px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .gallery-grid {
+    display: grid;
+    grid-template-rows: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 32px;
+  }
+
+  .art-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 16px;
+    box-shadow:
+      0 6px 15px rgba(0,0,0,0.6),
+      0 2px 6px rgba(0,0,0,0.4);
+    background: linear-gradient(145deg, #1e1e1e, #252525);
+    transition: transform 0.3s cubic-bezier(0.4,0,0.2,1), box-shadow 0.3s ease;
+    cursor: pointer;
+  }
+
+  .art-card:hover,
+  .art-card:focus-within {
+    transform: translateY(-8px);
+    box-shadow:
+      0 12px 30px rgba(38, 50, 56, 0.8),
+      0 8px 12px rgba(38, 50, 56, 0.7);
+    outline: none;
+    z-index: 10;
+  }
+
+  .art-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 16px 16px 0 0;
+    object-fit: cover;
+    aspect-ratio: 4 / 3;
+    transition: transform 0.5s ease;
+  }
+
+  .art-card:hover img,
+  .art-card:focus-within img {
+    transform: scale(1.05);
+  }
+
+  .art-info {
+    padding: 16px 24px;
+    background: #181818aa;
+    backdrop-filter: blur(8px);
+    color: #ddd;
+    border-radius: 0 0 16px 16px;
+    text-align: center;
+  }
+
+  .art-title {
+    font-weight: 700;
+    font-size: 1.3rem;
+    margin: 4px 0 8px;
+    color: #ededed;
+  }
+
+  .art-artist {
+    font-weight: 400;
+    font-size: 1rem;
+    color: #aaa;
+    margin: 0;
+    font-style: italic;
+  }
+
+  a{
+    text-decoration: none;
+    color: white;
+  }
+
+  /* Responsive typography */
+  @media (max-width: 640px) {
+    header {
+      padding: 16px 24px;
+    }
+    header h1 {
+      font-size: 1.6rem;
+    }
+    main {
+      padding: 24px 16px;
+    }
+    .art-info {
+      padding: 12px 16px;
+    }
+    .art-title {
+      font-size: 1.1rem;
+    }
+    .art-artist {
+      font-size: 0.9rem;
+    }
+  }
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+        }
+
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            top: 0px;
+            background: rgb(255 127 39);
+            background-blend-mode: darken;
+            background-size: cover;
+            color: white;
+            padding: 10px 20px;
+        }
+
+        .nav-list {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-list li {
+            margin-right: 20px;
+        }
+
+        .nav-list li:last-child {
+            margin-right: 0;
+        }
+
+        .nav-list li a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            transition: color 0.3s ease-in-out;
+        }
+
+        .nav-list li a:hover {
+            color: #ffd700;
+            /* Change the color on hover */
+        }
+
+        .rightNav {
+            text-align: right;
+        }
+
+        #search {
+            padding: 8px;
+            font-size: 16px;
+            border: 2px solid #fff;
+            border-radius: 5px;
+        }
+
+        .btn {
+            background-color: #ffd700;
+            color: #000;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .btn:hover {
+            background-color: #000;
+            /* Change the background color on hover */
+            color: #ffd700;
+        }
+
+    
